@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/user', (req, res) => {
-    teammembers = []
+    const teammembers = []
     pool
         .query('SELECT * FROM teammembers;')
         .then(query_res => {
